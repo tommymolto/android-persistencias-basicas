@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="22dp"
+        android:minLines="5"
+        android:layout_margin="5dp">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btEscreveInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escrever no arq int"
+        android:onClick="WriteBtn"
+        android:layout_below="@+id/editText1"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_alignEnd="@+id/editText1"
+        android:layout_marginRight="26dp"
+        android:layout_marginEnd="26dp" />
+
+    <Button
+        android:id="@+id/btLeInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ler arq int"
+        android:onClick="ReadBtn"
+        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignStart="@+id/editText1" />
+
+    <Button
+        android:id="@+id/btLeExt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ler arq ext"
+        android:onClick="ReadBtn"
+        android:layout_above="@+id/brLePref"
+        android:layout_alignLeft="@+id/brLePref"
+        android:layout_alignStart="@+id/brLePref" />
+
+    <Button
+        android:id="@+id/btEscreveExt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escrever arq ext"
+        android:onClick="ReadBtn"
+        android:layout_below="@+id/btEscreveInt"
+        android:layout_alignLeft="@+id/btEscreveInt"
+        android:layout_alignStart="@+id/btEscreveInt"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/btSalvaPref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Save"
+        android:text="Salva Pref"
+        android:layout_alignBaseline="@+id/brLePref"
+        android:layout_alignBottom="@+id/brLePref"
+        android:layout_alignLeft="@+id/btEscreveExt"
+        android:layout_alignStart="@+id/btEscreveExt" />
+
+    <Button
+        android:id="@+id/brLePref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Get"
+        android:text="Carrega Pref"
+        android:layout_below="@+id/btEscreveExt"
+        android:layout_alignLeft="@+id/btLeInt"
+        android:layout_alignStart="@+id/btLeInt" />
+
+    <Button
+        android:id="@+id/btLimpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpa"
+        android:onClick="clear"
+        android:layout_below="@+id/btSalvaPref"
+        android:layout_toRightOf="@+id/brLePref"
+        android:layout_toEndOf="@+id/brLePref"
+        android:layout_marginTop="41dp" />
+
+
+</RelativeLayout>
